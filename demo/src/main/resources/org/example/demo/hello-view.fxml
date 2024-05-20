@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="441.0" prefWidth="818.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.HelloController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+   <VBox prefHeight="71.0" prefWidth="407.0">
+      <children>
+      
+        <Label fx:id="welcomeText" prefHeight="26.0" prefWidth="540.0" text="CAFETERIA UCA" />
+         <ImageView fitHeight="25.0" fitWidth="533.0" pickOnBounds="true" preserveRatio="true" />
+      </children>
+   </VBox>
+   <VBox prefHeight="265.0" prefWidth="534.0">
+      <children>
+         <HBox prefHeight="142.0" prefWidth="534.0">
+            <children>
+               <VBox prefHeight="124.0" prefWidth="409.0">
+                  <children>
+                     <Label prefHeight="16.0" prefWidth="288.0" text="Crepeado de papas con queso" textAlignment="CENTER" />
+                     <Label prefHeight="16.0" prefWidth="239.0" text="Cantidad:" textAlignment="CENTER">
+                        <font>
+                           <Font size="11.0" />
+                        </font>
+                     </Label>
+                     <Spinner prefHeight="24.0" prefWidth="207.0" />
+                     <Label text="Subtotal">
+                        <font>
+                           <Font size="11.0" />
+                        </font>
+                     </Label>
+                  </children></VBox>
+               <VBox prefHeight="124.0" prefWidth="370.0">
+                  <children>
+                     <Label prefHeight="16.0" prefWidth="253.0" text="Carne de res deshilachada" />
+                     <Label text="Cantidad:">
+                        <font>
+                           <Font size="11.0" />
+                        </font>
+                     </Label>
+                     <Spinner prefHeight="24.0" prefWidth="202.0" />
+                     <Label text="Subtotal">
+                        <font>
+                           <Font size="11.0" />
+                        </font>
+                     </Label>
+                  </children></VBox>
+            </children>
+         </HBox>
+         <HBox prefHeight="137.0" prefWidth="534.0">
+            <children>
+               <VBox prefHeight="119.0" prefWidth="408.0">
+                  <children>
+                     <Label prefHeight="16.0" prefWidth="293.0" text="Alas de pollo frito" />
+                     <Label text="Cantidad: ">
+                        <font>
+                           <Font size="11.0" />
+                        </font>
+                     </Label>
+                     <Spinner prefHeight="24.0" prefWidth="210.0" />
+                     <Label text="Subtotal">
+                        <font>
+                           <Font size="11.0" />
+                        </font>
+                     </Label>
+                  </children></VBox>
+               <VBox prefHeight="119.0" prefWidth="379.0">
+                  <children>
+                     <Label prefHeight="16.0" prefWidth="268.0" text="Vegetales al ajillo" />
+                     <Label text="Cantidad:">
+                        <font>
+                           <Font size="11.0" />
+                        </font>
+                     </Label>
+                     <Spinner prefHeight="24.0" prefWidth="207.0" />
+                     <Label text="Subtotal">
+                        <font>
+                           <Font size="11.0" />
+                        </font>
+                     </Label>
+                  </children></VBox>
+            </children>
+         </HBox>
+      </children>
+   </VBox>
+   <VBox prefHeight="95.0" prefWidth="534.0">
+      <children>
+         <HBox prefHeight="100.0" prefWidth="200.0">
+            <children>
+               <VBox prefHeight="72.0" prefWidth="370.0">
+                  <children>
+                     <HBox prefHeight="72.0" prefWidth="389.0">
+                        <children>
+                           <VBox prefHeight="72.0" prefWidth="184.0">
+                              <children>
+                                 <Label prefHeight="16.0" prefWidth="145.0" text="Tipo de cliente" textAlignment="CENTER" />
+                                 <RadioButton mnemonicParsing="false" text="Empleado" />
+                                 <RadioButton mnemonicParsing="false" text="Estudiante" />
+                              </children></VBox>
+                           <VBox prefHeight="72.0" prefWidth="129.0">
+                              <children>
+                                 <Label text="Forma de pago:" />
+                                 <RadioButton mnemonicParsing="false" text="Efectivo" />
+                                 <RadioButton mnemonicParsing="false" text="Tarjeta" />
+                              </children>
+                           </VBox>
+                        </children>
+                     </HBox>
+                  </children>
+               </VBox>
+               <VBox prefHeight="72.0" prefWidth="414.0">
+                  <children>
+                     <Label text="Nombre del cliente:" />
+                     <TextField prefHeight="24.0" prefWidth="288.0" />
+                  </children></VBox>
+            </children>
+         </HBox>
+      </children></VBox>
+</VBox>
