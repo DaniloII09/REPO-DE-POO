@@ -28,18 +28,12 @@ public class HelloController{
     private Label cliente, pago, subtotalPapa, subtotalCarne, subtotalPollo, subtotalVegetales, total;
 
     private MediaPlayer mediaPlayer;
-
     @FXML
     private Button playButton;
-
     @FXML
     private Button pauseButton;
-
     @FXML
     private Button stopButton;
-
-
-
     @FXML
     private void handlePlay() {
         mediaPlayer.play();
@@ -87,7 +81,6 @@ public class HelloController{
         SpinnerValueFactory<Integer> valueFactoryVegetales = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 100, 0);
         vegetales.setValueFactory(valueFactoryVegetales);
 
-        //ChangeListener
         papa.valueProperty().addListener(new ChangeListener<Integer>(){
 
             public void changed(ObservableValue<? extends Integer> observableValue, Integer integer, Integer t1) {
@@ -160,6 +153,8 @@ public class HelloController{
         est.setSelected(false);
         emp.setSelected(false);
         total.setText("0.00");
+        mediaPlayer.setVolume(0.5);
+        mediaPlayer.setRate(1.5);
     }
     @FXML
     private void handlebtnComprarAction() {
@@ -168,6 +163,7 @@ public class HelloController{
             alert.setTitle("ERROR");
             alert.setHeaderText("Nombre no valido");
             alert.setContentText("El nombre del cliente debe de ser de mas de 6 caracteres");
+            mediaPlayer.play();
             alert.show();
             return;
         }
@@ -182,6 +178,7 @@ public class HelloController{
             alert.setTitle("ERROR");
             alert.setHeaderText("No se ha seleccionado ningun producto");
             alert.setContentText("Ingrese un producto para realizar la compra");
+            mediaPlayer.play();
             alert.show();
             return;
         }
@@ -191,6 +188,7 @@ public class HelloController{
             alert.setTitle("ERROR");
             alert.setHeaderText("No se ha seleccionado ningun metodo de pago");
             alert.setContentText("Seleccion un metodo de pago para continuar");
+            mediaPlayer.play();
             alert.show();
             return;
         }
@@ -200,6 +198,7 @@ public class HelloController{
             alert.setTitle("ERROR");
             alert.setHeaderText("No se ha seleccionado un tipo de cliente");
             alert.setContentText("Seleccione un tipo de cliente para continuar");
+            mediaPlayer.play();
             alert.show();
             return;
         }
