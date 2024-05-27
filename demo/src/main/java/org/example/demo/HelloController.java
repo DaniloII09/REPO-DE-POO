@@ -6,6 +6,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+
+import java.net.URL;
 
 public class HelloController{
     @FXML
@@ -22,6 +26,34 @@ public class HelloController{
     private RadioButton efectivo, tarjeta, emp, est;
     @FXML
     private Label cliente, pago, subtotalPapa, subtotalCarne, subtotalPollo, subtotalVegetales, total;
+
+    private MediaPlayer mediaPlayer;
+
+    @FXML
+    private Button playButton;
+
+    @FXML
+    private Button pauseButton;
+
+    @FXML
+    private Button stopButton;
+
+
+
+    @FXML
+    private void handlePlay() {
+        mediaPlayer.play();
+    }
+
+    @FXML
+    private void handlePause() {
+        mediaPlayer.pause();
+    }
+
+    @FXML
+    private void handleStop() {
+        mediaPlayer.stop();
+    }
 
     double precioPapa = 1.25;
     double precioCarne = 2.25;
@@ -84,6 +116,10 @@ public class HelloController{
                 subtotalVegetales.setText("$" + Double.toString(precioVegetales * t1));
             }
         });
+
+        URL mediaUrl = getClass().getResource("/org/Sounds");
+        Media mediaError = new Media(mediaUrl.toExternalForm());
+        mediaPlayer = new MediaPlayer(mediaError);
     }
     @FXML
     public void rbEmpleadoAction(){
@@ -179,3 +215,5 @@ public class HelloController{
     }
 
 }
+
+//ERROR CON CREDENCIALES XD
