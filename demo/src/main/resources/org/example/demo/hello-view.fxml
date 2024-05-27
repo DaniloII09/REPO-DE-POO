@@ -5,121 +5,488 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+<?import javafx.scene.media.*?>
 
-<VBox alignment="CENTER" prefHeight="441.0" prefWidth="818.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-  </padding>
-   <VBox prefHeight="71.0" prefWidth="407.0">
-      <children>
-      
-        <Label fx:id="welcomeText" prefHeight="26.0" prefWidth="540.0" text="CAFETERIA UCA" />
-         <ImageView fitHeight="25.0" fitWidth="533.0" pickOnBounds="true" preserveRatio="true" />
-      </children>
-   </VBox>
-   <VBox prefHeight="265.0" prefWidth="534.0">
-      <children>
-         <HBox prefHeight="142.0" prefWidth="534.0">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="719.0" style="-fx-background-color: #f88000;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.HelloController">
+    <children>
+        <HBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-               <VBox prefHeight="124.0" prefWidth="409.0">
-                  <children>
-                     <Label prefHeight="16.0" prefWidth="288.0" text="Crepeado de papas con queso" textAlignment="CENTER" />
-                     <Label prefHeight="16.0" prefWidth="239.0" text="Cantidad:" textAlignment="CENTER">
-                        <font>
-                           <Font size="11.0" />
-                        </font>
-                     </Label>
-                     <Spinner prefHeight="24.0" prefWidth="207.0" />
-                     <Label text="Subtotal">
-                        <font>
-                           <Font size="11.0" />
-                        </font>
-                     </Label>
-                  </children></VBox>
-               <VBox prefHeight="124.0" prefWidth="370.0">
-                  <children>
-                     <Label prefHeight="16.0" prefWidth="253.0" text="Carne de res deshilachada" />
-                     <Label text="Cantidad:">
-                        <font>
-                           <Font size="11.0" />
-                        </font>
-                     </Label>
-                     <Spinner prefHeight="24.0" prefWidth="202.0" />
-                     <Label text="Subtotal">
-                        <font>
-                           <Font size="11.0" />
-                        </font>
-                     </Label>
-                  </children></VBox>
+                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                    <children>
+                        <ImageView fitHeight="90.0" fitWidth="729.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                            <image>
+                                <Image url="@logo.png" />
+                            </image>
+                        </ImageView>
+                        <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                            <children>
+                                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <AnchorPane prefHeight="304.0" prefWidth="686.0" style="-fx-background-color: #fffefc; -fx-background-radius: 15;" VBox.vgrow="ALWAYS">
+                                            <opaqueInsets>
+                                                <Insets />
+                                            </opaqueInsets>
+                                            <children>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                            <children>
+                                                                <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f5d478; -fx-background-radius: 15;" VBox.vgrow="ALWAYS">
+                                                                    <opaqueInsets>
+                                                                        <Insets />
+                                                                    </opaqueInsets>
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                    </VBox.margin>
+                                                                    <children>
+                                                                        <HBox alignment="CENTER" layoutX="14.0" layoutY="14.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                            <children>
+                                                                                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                                    <children>
+                                                                                        <Label text="Crepado de papas con queso" VBox.vgrow="ALWAYS">
+                                                                                            <font>
+                                                                                                <Font size="18.0" />
+                                                                                            </font>
+                                                                                        </Label>
+                                                                                        <HBox VBox.vgrow="ALWAYS">
+                                                                                            <children>
+                                                                                                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                                                    <children>
+                                                                                                        <Label text="Cantidad:" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                            <font>
+                                                                                                                <Font size="14.0" />
+                                                                                                            </font>
+                                                                                                        </Label>
+                                                                                                        <Spinner fx:id="papa" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                        </Spinner>
+                                                                                                        <Label text="Subtotal:" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                            <font>
+                                                                                                                <Font size="14.0" />
+                                                                                                            </font>
+                                                                                                        </Label>
+                                                                                                        <Label fx:id="subtotalPapa" text="\$0.00" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                            <font>
+                                                                                                                <Font size="14.0" />
+                                                                                                            </font>
+                                                                                                        </Label>
+                                                                                                    </children>
+                                                                                                </VBox>
+                                                                                                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                                                    <children>
+                                                                                                        <ImageView fitHeight="98.0" fitWidth="142.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                                                                                                            <image>
+                                                                                                                <Image url="@capeado.jpg" />
+                                                                                                            </image>
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                        </ImageView>
+                                                                                                        <Label text="Precio: $1.25" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                            <font>
+                                                                                                                <Font size="14.0" />
+                                                                                                            </font>
+                                                                                                        </Label>
+                                                                                                    </children>
+                                                                                                </VBox>
+                                                                                            </children>
+                                                                                        </HBox>
+                                                                                    </children>
+                                                                                </VBox>
+                                                                            </children>
+                                                                        </HBox>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                                <AnchorPane layoutX="15.0" layoutY="15.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f5d478; -fx-background-radius: 15;" VBox.vgrow="ALWAYS">
+                                                                    <opaqueInsets>
+                                                                        <Insets />
+                                                                    </opaqueInsets>
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                    </VBox.margin>
+                                                                    <children>
+                                                                        <HBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                            <children>
+                                                                                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                                    <children>
+                                                                                        <Label text="Alas de pollo frito" VBox.vgrow="ALWAYS">
+                                                                                            <font>
+                                                                                                <Font size="18.0" />
+                                                                                            </font>
+                                                                                        </Label>
+                                                                                        <HBox VBox.vgrow="ALWAYS">
+                                                                                            <children>
+                                                                                                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                                                    <children>
+                                                                                                        <Label text="Cantidad:" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                            <font>
+                                                                                                                <Font size="14.0" />
+                                                                                                            </font>
+                                                                                                        </Label>
+                                                                                                        <Spinner fx:id="pollo" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                        </Spinner>
+                                                                                                        <Label text="Subtotal:" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                            <font>
+                                                                                                                <Font size="14.0" />
+                                                                                                            </font>
+                                                                                                        </Label>
+                                                                                                        <Label fx:id="subtotalPollo" text="\$0.00" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                            <font>
+                                                                                                                <Font size="14.0" />
+                                                                                                            </font>
+                                                                                                        </Label>
+                                                                                                    </children>
+                                                                                                </VBox>
+                                                                                                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                                                    <children>
+                                                                                                        <ImageView fitHeight="98.0" fitWidth="142.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                                                                                                            <image>
+                                                                                                                <Image url="@pollo.jpg" />
+                                                                                                            </image>
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                        </ImageView>
+                                                                                                        <Label text="Precio: $1.75" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                            <font>
+                                                                                                                <Font size="14.0" />
+                                                                                                            </font>
+                                                                                                        </Label>
+                                                                                                    </children>
+                                                                                                </VBox>
+                                                                                            </children>
+                                                                                        </HBox>
+                                                                                    </children>
+                                                                                </VBox>
+                                                                            </children>
+                                                                        </HBox>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                            <children>
+                                                                <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f5d478; -fx-background-radius: 15;" VBox.vgrow="ALWAYS">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                    </VBox.margin>
+                                                                    <children>
+                                                                        <HBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                            <children>
+                                                                                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                                    <children>
+                                                                                        <Label text="Carne de res deshilachada" VBox.vgrow="ALWAYS">
+                                                                                            <font>
+                                                                                                <Font size="18.0" />
+                                                                                            </font>
+                                                                                        </Label>
+                                                                                        <HBox VBox.vgrow="ALWAYS">
+                                                                                            <children>
+                                                                                                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                                                    <children>
+                                                                                                        <Label text="Cantidad:" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                            <font>
+                                                                                                                <Font size="14.0" />
+                                                                                                            </font>
+                                                                                                        </Label>
+                                                                                                        <Spinner fx:id="carne" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                        </Spinner>
+                                                                                                        <Label text="Subtotal:" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                            <font>
+                                                                                                                <Font size="14.0" />
+                                                                                                            </font>
+                                                                                                        </Label>
+                                                                                                        <Label fx:id="subtotalCarne" text="\$0.00" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                            <font>
+                                                                                                                <Font size="14.0" />
+                                                                                                            </font>
+                                                                                                        </Label>
+                                                                                                    </children>
+                                                                                                </VBox>
+                                                                                                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                                                    <children>
+                                                                                                        <ImageView fitHeight="98.0" fitWidth="142.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                                                                                                            <image>
+                                                                                                                <Image url="@carne.jpg" />
+                                                                                                            </image>
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                        </ImageView>
+                                                                                                        <Label text="Precio: $2.25" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                            <font>
+                                                                                                                <Font size="14.0" />
+                                                                                                            </font>
+                                                                                                        </Label>
+                                                                                                    </children>
+                                                                                                </VBox>
+                                                                                            </children>
+                                                                                        </HBox>
+                                                                                    </children>
+                                                                                </VBox>
+                                                                            </children>
+                                                                        </HBox>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                                <AnchorPane layoutX="15.0" layoutY="62.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f5d478; -fx-background-radius: 15;" VBox.vgrow="ALWAYS">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                    </VBox.margin>
+                                                                    <children>
+                                                                        <HBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                            <children>
+                                                                                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                                    <children>
+                                                                                        <Label text="Vegetales al ajillo" VBox.vgrow="ALWAYS">
+                                                                                            <font>
+                                                                                                <Font size="18.0" />
+                                                                                            </font>
+                                                                                        </Label>
+                                                                                        <HBox VBox.vgrow="ALWAYS">
+                                                                                            <children>
+                                                                                                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                                                    <children>
+                                                                                                        <Label text="Cantidad:" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                            <font>
+                                                                                                                <Font size="14.0" />
+                                                                                                            </font>
+                                                                                                        </Label>
+                                                                                                        <Spinner fx:id="vegetales" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                        </Spinner>
+                                                                                                        <Label text="Subtotal:" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                            <font>
+                                                                                                                <Font size="14.0" />
+                                                                                                            </font>
+                                                                                                        </Label>
+                                                                                                        <Label fx:id="subtotalVegetales" text="\$0.00" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                            <font>
+                                                                                                                <Font size="14.0" />
+                                                                                                            </font>
+                                                                                                        </Label>
+                                                                                                    </children>
+                                                                                                </VBox>
+                                                                                                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                                                    <children>
+                                                                                                        <ImageView fitHeight="98.0" fitWidth="142.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                                                                                                            <image>
+                                                                                                                <Image url="@vegetales.jpg" />
+                                                                                                            </image>
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                        </ImageView>
+                                                                                                        <Label text="Precio: $0.75" VBox.vgrow="ALWAYS">
+                                                                                                            <VBox.margin>
+                                                                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                                            </VBox.margin>
+                                                                                                            <font>
+                                                                                                                <Font size="14.0" />
+                                                                                                            </font>
+                                                                                                        </Label>
+                                                                                                    </children>
+                                                                                                </VBox>
+                                                                                            </children>
+                                                                                        </HBox>
+                                                                                    </children>
+                                                                                </VBox>
+                                                                            </children>
+                                                                        </HBox>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </VBox>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="120.0" prefWidth="719.0" VBox.vgrow="ALWAYS">
+                            <children>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fffefc; -fx-background-radius: 15;" HBox.hgrow="ALWAYS">
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                                    </HBox.margin>
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="110.0" prefWidth="166.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" text="Tipo de cliente:" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                                    <VBox.margin>
+                                                        <Insets bottom="5.0" top="5.0" />
+                                                    </VBox.margin>
+                                                    <font>
+                                                        <Font size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <RadioButton fx:id="emp" contentDisplay="CENTER" mnemonicParsing="false" onAction="#rbEmpleadoAction" text="Empleado" VBox.vgrow="ALWAYS">
+                                                    <VBox.margin>
+                                                        <Insets bottom="5.0" top="5.0" />
+                                                    </VBox.margin>
+                                                </RadioButton>
+                                                <RadioButton fx:id="est" contentDisplay="CENTER" mnemonicParsing="false" onAction="#rbEstudianteAction" text="Estudiante" VBox.vgrow="ALWAYS">
+                                                    <VBox.margin>
+                                                        <Insets bottom="5.0" top="5.0" />
+                                                    </VBox.margin>
+                                                </RadioButton>
+                                                <Label fx:id="cliente" onDragDetected="#clienteAction" text="cliente" VBox.vgrow="ALWAYS" />
+                                            </children>
+                                            <opaqueInsets>
+                                                <Insets />
+                                            </opaqueInsets>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fffefc; -fx-background-radius: 15;" HBox.hgrow="ALWAYS">
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </HBox.margin>
+                                    <children>
+                                        <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Label contentDisplay="CENTER" text="Forma de pago:" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                                                    <VBox.margin>
+                                                        <Insets bottom="5.0" top="5.0" />
+                                                    </VBox.margin>
+                                                    <font>
+                                                        <Font size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <RadioButton fx:id="efectivo" contentDisplay="CENTER" mnemonicParsing="false" onAction="#rbEfectivoAction" text="Efectivo" VBox.vgrow="ALWAYS">
+                                                    <VBox.margin>
+                                                        <Insets bottom="5.0" top="5.0" />
+                                                    </VBox.margin>
+                                                </RadioButton>
+                                                <RadioButton fx:id="tarjeta" contentDisplay="CENTER" mnemonicParsing="false" onAction="#rbTarjetaAction" text="Tarjeta" VBox.vgrow="ALWAYS">
+                                                    <VBox.margin>
+                                                        <Insets bottom="5.0" top="5.0" />
+                                                    </VBox.margin>
+                                                </RadioButton>
+                                                <Label fx:id="pago" onDragDetected="#pagoAction" text="pago" VBox.vgrow="ALWAYS" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="120.0" prefWidth="380.0" style="-fx-background-color: #fffefc; -fx-background-radius: 15;" HBox.hgrow="ALWAYS">
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                                    </HBox.margin>
+                                    <children>
+                                        <VBox alignment="CENTER" layoutX="14.0" layoutY="12.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                                    <children>
+                                                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="160.0" text="Nombre del cliente:" HBox.hgrow="ALWAYS">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField fx:id="nombre" alignment="CENTER" onAction="#nombreAction" prefHeight="25.0" prefWidth="243.0" HBox.hgrow="ALWAYS" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                                    <children>
+                                                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="36.0" text="Total:" HBox.hgrow="ALWAYS">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                            <HBox.margin>
+                                                                <Insets left="5.0" right="5.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <Label fx:id="total" alignment="CENTER" prefHeight="20.0" prefWidth="36.0" text="0.00" HBox.hgrow="ALWAYS">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                            <HBox.margin>
+                                                                <Insets left="5.0" right="5.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                                    <children>
+                                                        <Button fx:id="btnComprar" alignment="CENTER" mnemonicParsing="false" onAction="#handlebtnComprarAction" style="-fx-background-color: #fca400;" text="Comprar" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                                            <HBox.margin>
+                                                                <Insets left="5.0" right="5.0" />
+                                                            </HBox.margin>
+                                                        </Button>
+                                                        <Button fx:id="btnLimpiar" alignment="CENTER" mnemonicParsing="false" onAction="#handlebtnLimpiarAction" style="-fx-background-color: #fca400;" text="Limpiar" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                                            <HBox.margin>
+                                                                <Insets left="5.0" right="5.0" />
+                                                            </HBox.margin>
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
             </children>
-         </HBox>
-         <HBox prefHeight="137.0" prefWidth="534.0">
-            <children>
-               <VBox prefHeight="119.0" prefWidth="408.0">
-                  <children>
-                     <Label prefHeight="16.0" prefWidth="293.0" text="Alas de pollo frito" />
-                     <Label text="Cantidad: ">
-                        <font>
-                           <Font size="11.0" />
-                        </font>
-                     </Label>
-                     <Spinner prefHeight="24.0" prefWidth="210.0" />
-                     <Label text="Subtotal">
-                        <font>
-                           <Font size="11.0" />
-                        </font>
-                     </Label>
-                  </children></VBox>
-               <VBox prefHeight="119.0" prefWidth="379.0">
-                  <children>
-                     <Label prefHeight="16.0" prefWidth="268.0" text="Vegetales al ajillo" />
-                     <Label text="Cantidad:">
-                        <font>
-                           <Font size="11.0" />
-                        </font>
-                     </Label>
-                     <Spinner prefHeight="24.0" prefWidth="207.0" />
-                     <Label text="Subtotal">
-                        <font>
-                           <Font size="11.0" />
-                        </font>
-                     </Label>
-                  </children></VBox>
-            </children>
-         </HBox>
-      </children>
-   </VBox>
-   <VBox prefHeight="95.0" prefWidth="534.0">
-      <children>
-         <HBox prefHeight="100.0" prefWidth="200.0">
-            <children>
-               <VBox prefHeight="72.0" prefWidth="370.0">
-                  <children>
-                     <HBox prefHeight="72.0" prefWidth="389.0">
-                        <children>
-                           <VBox prefHeight="72.0" prefWidth="184.0">
-                              <children>
-                                 <Label prefHeight="16.0" prefWidth="145.0" text="Tipo de cliente" textAlignment="CENTER" />
-                                 <RadioButton mnemonicParsing="false" text="Empleado" />
-                                 <RadioButton mnemonicParsing="false" text="Estudiante" />
-                              </children></VBox>
-                           <VBox prefHeight="72.0" prefWidth="129.0">
-                              <children>
-                                 <Label text="Forma de pago:" />
-                                 <RadioButton mnemonicParsing="false" text="Efectivo" />
-                                 <RadioButton mnemonicParsing="false" text="Tarjeta" />
-                              </children>
-                           </VBox>
-                        </children>
-                     </HBox>
-                  </children>
-               </VBox>
-               <VBox prefHeight="72.0" prefWidth="414.0">
-                  <children>
-                     <Label text="Nombre del cliente:" />
-                     <TextField prefHeight="24.0" prefWidth="288.0" />
-                  </children></VBox>
-            </children>
-         </HBox>
-      </children></VBox>
-</VBox>
+        </HBox>
+    </children>
+</AnchorPane>
